@@ -8,6 +8,7 @@ import {
   TiWeatherShower,
   TiWeatherNight,
 } from "react-icons/ti";
+import { TbMist } from "react-icons/tb";
 
 function App() {
   //States to stock the city name and the data from the API
@@ -54,6 +55,10 @@ function App() {
         break;
       case "Rain":
         return <TiWeatherShower />;
+        break;
+      case "Mist":
+        return <TbMist />;
+        break;
       default:
         console.log("No value found");
     }
