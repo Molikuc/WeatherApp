@@ -66,7 +66,7 @@ function App() {
 
   return (
     <div
-      className="main"
+      className="container"
       style={
         weather.weather
           ? weather.dt > weather.sys.sunrise && weather.dt < weather.sys.sunset
