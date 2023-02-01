@@ -9,6 +9,7 @@ import {
   TiWeatherNight,
 } from "react-icons/ti";
 import { TbMist } from "react-icons/tb";
+import Welcome from "./components/Welcome";
 
 function App() {
   //States to stock the city name and the data from the API
@@ -94,6 +95,7 @@ function App() {
         </div>
       </nav>
       <div className="main">
+        {weather.name ? null : <Welcome />}
         <h1>{weather.name}</h1>
         <div>
           {weather.main ? (

@@ -7,8 +7,14 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #1e27c6;
+}
+
 .container {
   height: 100vh;
+  background: radial-gradient(ellipse at 50% 50%, #02d181 0%, #278119 100%);
 }
 
 .navbar {
@@ -60,4 +66,15 @@ body {
 
 .main--icon {
   font-size: 10rem;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20vh;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #fafaff;
+  padding: 10px;
 }
