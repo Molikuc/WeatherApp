@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { WiHumidity } from "react-icons/wi";
 import { GiWindsock } from "react-icons/gi";
+import { FiCloudDrizzle } from "react-icons/fi";
 import { FaThermometerHalf } from "react-icons/fa";
 import { GoSearch } from "react-icons/go";
 import {
@@ -33,7 +34,8 @@ function App() {
   // Calling the API and give data to setWeather using Axios
 
   const fetchCity = (event) => {
-    if (event.keyCode === 13) {
+    if (event.key === "Enter") {
+      event.target.blur();
       axios.get(url).then((response) => {
         setWeather(response.data);
         console.log(response.data);
@@ -62,6 +64,9 @@ function App() {
         break;
       case "Mist":
         return <TbMist />;
+        break;
+      case "Drizzle":
+        return <FiCloudDrizzle />;
         break;
       default:
         console.log("No value found");
