@@ -33,7 +33,7 @@ function App() {
   // Calling the API and give data to setWeather using Axios
 
   const fetchCity = (event) => {
-    if (event.key === "Enter") {
+    if (event.keyCode === 13) {
       axios.get(url).then((response) => {
         setWeather(response.data);
         console.log(response.data);
